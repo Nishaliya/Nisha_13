@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ACTB Connection portal</title>
+
+<script type="text/javascript">
+
+function registrationValidation (){
+	var customerName=document.registration.customername.value;
+	var customerMail=document.registration.customermail.value;
+	var mobileNumber=document.registration.mobilenumber.value;
+	
+
+if(customerName=="" || customerName=="null"){
+	alert("customer name cannot be left blank.");
+}
+else if(customerMail=="" || customerMail=="null"){
+	alert("customer Mail cannot be left blank.");
+}
+else if(mobileNumber=="" || mobileNumber=="null"){
+	alert("Mobile Number cannot be left blank.");
+}
+
+}
+
+</script>
+<style>
+body{
+background-color:pink;
+}
+h1,p{
+color:purple;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<center>
+<form action="" name="registration" onsubmit="return registrationValidation()">
+<h1>ACTB Connection Portal</h1>
+<table>
+<tr>
+<td >Customer Name</td>
+<td> <input type="text" name="customername" placeholder="Enter the customer name"></td>
+</tr>
+<tr>
+<td>Customer Email</td>
+<td> <input type="email" name="customermail"  placeholder="abc@gmail.com"> </td>
+</tr>
+<tr>
+<td>Mobile Number</td>
+<td><input type="number" name="mobilenumber" placeholder="Enter the mobile number"> </td>
+</tr>
+<tr>
+<td>Type of Broadband</td>
+<td><select> <option>pre</option>
+<option>post</option>
+ </select>
+ </td>
+</tr>
+
+<tr>
+<td>Scheme Name</td>
+<td> Local <input type="radio" name="broadband">
+STD <input type="radio" name=std>
+FullTalkTime <input type="radio" name=talktime>
+ </td>
+</tr>
+
+<tr>
+<td>Connection Duration</td>
+<td><textarea name="content"> </textarea></td>
+</tr>
+
+<tr>
+<td> <input type="text" name="bill" placeholder="Calculate Bill Amount">
+<input type="reset" name="reset" value="reset"></td>
+</tr>
+</table>
+
+<table border="1">
+<p> Rental Cost Table </p>
+<tr>
+<th>Connection Type</th>
+<th>Call Limit</th>
+<th>Monthly Rental</th>
+</tr>
+
+<tr>
+<td>Pre</td>
+<td>500</td>
+<td>75</td>
+</tr>
+
+<tr>
+<td>Post</td>
+<td>Unlimited</td>
+<td>150</td>
+</tr>
+
+</table><br>
+
+<input type="submit" name="submit" >
+
+
+</form>
+ </center>
+</body>
+</html>
